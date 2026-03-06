@@ -10,6 +10,8 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.98.0",
     "plasmo": "0.90.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -24,8 +26,14 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "contextMenus"
+    ],
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "http://*/*"
     ]
   }
 }
