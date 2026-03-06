@@ -72,7 +72,7 @@ function IndexPopup() {
   const summarizeNote = async (id: string, text: string) => {
     setLoadingId(id);
     try {
-      const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
+      const GROQ_API_KEY = process.env.PLASMO_PUBLIC_VITE_GROQ_API_KEY;
       
       const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",
